@@ -9,7 +9,7 @@ const Nav = () => {
     </li>
   ));
   return (
-    <nav>
+    <nav className={styles.nav}>
       <ul>{navLink}</ul>
     </nav>
   );
