@@ -1,0 +1,43 @@
+.header {
+  --padding-inline: 1.5rem;
+  --padding-block: 1.25rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: var(--padding-inline);
+  padding-inline: clamp(1.5rem, -1.58rem + 13.15vw, 10.25rem);
+  padding-block: 1.25rem;
+  padding-block: clamp(
+    1.25rem,
+    1.03rem + 0.94vw,
+    1.875rem
+  );
+}
+
+.cart__user,
+.toggler__logo {
+  display: flex;
+  align-items: center;
+}
+
+.toggler__logo {
+  gap: 1rem;
+}
+
+.cart__user {
+  gap: 1.375rem;
+}
+
+.nav__toggler {
+  background-image: url(../../images/icon-menu.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 1rem;
+  aspect-ratio: 1/1;
+}
+
+.avatar {
+  width: 1.5rem;
+  aspect-ratio: 1/1;
+}
