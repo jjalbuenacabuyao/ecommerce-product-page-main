@@ -1,0 +1,35 @@
+.showcase {
+  display: flex;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.showcase__img[data-active-slide="false"] {
+  width: 0;
+}
+
+.showcase__img[data-active-slide="true"] {
+  width: 100%;
+}
+
+.showcase :is(.showcase__prev, .showcase__next) {
+  width: 2.5rem;
+  aspect-ratio: 1/1;
+  position: absolute;
+  top: 50%;
+  bottom: 50%;
+  transform: translateY(-50%);
+
+  display: grid;
+  place-items: center;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 50%;
+}
+
+.showcase__prev {
+  left: 1rem;
+}
+
+.showcase__next {
+  right: 1rem;
+}
