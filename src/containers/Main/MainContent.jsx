@@ -1,8 +1,11 @@
 import React from 'react'
+import { Showcase } from '../../components'
 
 const MainContent = () => {
   return (
-    <div>MainContent</div>
+    <main>
+      <Showcase />
+    </main>
   )
 }
 
