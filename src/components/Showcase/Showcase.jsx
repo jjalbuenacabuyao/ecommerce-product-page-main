@@ -24,6 +24,7 @@ const Showcase = () => {
       <button
         className={styles.showcase__prev}
         onClick={() => setSlide(slide == 0 ? 0 : --slide)}
+        disabled={slide == 0 ? true : false}
       >
         <img src={prev} alt="" />
       </button>
@@ -31,6 +32,7 @@ const Showcase = () => {
       <button
         className={styles.showcase__next}
         onClick={() => setSlide(slide == 3 ? 3 : ++slide)}
+        disabled={slide == 3 ? true : false}
       >
         <img src={next} alt="" />
       </button>
