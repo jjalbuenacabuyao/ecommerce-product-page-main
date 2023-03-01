@@ -21,13 +21,16 @@ const Showcase = () => {
         />
       ))}
 
-      <button className={styles.showcase__prev} onClick={() => setSlide(slide == 0 ? 0 : --slide)}>
+      <button
+        className={styles.showcase__prev}
+        onClick={() => setSlide(slide == 0 ? 0 : --slide)}
+      >
         <img src={prev} alt="" />
       </button>
 
       <button
         className={styles.showcase__next}
-        onClick={() => setSlide(slide == 3 ? 3 : (++slide))}
+        onClick={() => setSlide(slide == 3 ? 3 : ++slide)}
       >
         <img src={next} alt="" />
       </button>
