@@ -22,13 +22,13 @@ const Description = () => {
       <div className={styles.order}>
         <div className={styles.button__group}>
           <button>
-            <img src={minusIcon} alt="" />
+            <img src={minusIcon} alt="Minus icon" />
           </button>
 
           <p>{orderCount}</p>
 
           <button>
-            <img src={plusIcon} alt="" />
+            <img src={plusIcon} alt="Plus icon" />
           </button>
         </div>
 
