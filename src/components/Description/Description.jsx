@@ -21,13 +21,13 @@ const Description = () => {
 
       <div className={styles.order}>
         <div className={styles.button__group}>
-          <button>
+          <button onClick={() => setOrderCount(orderCount == 0 ? 0 : --orderCount)}>
             <img src={minusIcon} alt="Minus icon" />
           </button>
 
           <p>{orderCount}</p>
 
-          <button>
+          <button onClick={() => setOrderCount(orderCount + 1)}>
             <img src={plusIcon} alt="Plus icon" />
           </button>
         </div>
