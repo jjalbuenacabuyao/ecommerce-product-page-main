@@ -1,7 +1,6 @@
 import React from "react";
 import { Nav, Cart } from "../../components";
-import logo from "../../images/logo.svg";
-import user from "../../images/image-avatar.png"
+import { logo, avatar } from "../../images";
 import styles from "./header.module.css";
 
 const Header = () => {
@@ -19,7 +18,7 @@ const Header = () => {
 
       <div className={styles.cart__user}>
         <Cart />
-        <img src={user} alt="User avatar" className={styles.avatar}/>
+        <img src={avatar} alt="User avatar" className={styles.avatar}/>
       </div>
     </header>
   );
