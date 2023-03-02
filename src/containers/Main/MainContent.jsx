@@ -1,10 +1,11 @@
 import React from 'react'
-import { Showcase } from '../../components'
+import { Showcase, Description } from '../../components'
 
 const MainContent = () => {
   return (
     <main>
       <Showcase />
+      <Description />
     </main>
   )
 }
