@@ -4,7 +4,7 @@ import styles from "./nav.module.css";
 const Nav = () => {
   const links = ["Collections", "Men", "Women", "About", "Contact"];
   const navLink = links.map((link) => (
-    <li>
+    <li key={link}>
       <a href="#">{link}</a>
     </li>
   ));
