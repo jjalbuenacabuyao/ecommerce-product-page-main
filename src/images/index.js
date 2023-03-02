@@ -1,4 +1,5 @@
 import cartIcon from "./icon-cart.svg";
+import cartIconWhite from "./cart-icon-white.svg";
 import closeIcon from "./icon-close.svg";
 import deleteIcon from "./icon-delete.svg";
 import menuIcon from "./icon-menu.svg";
@@ -27,6 +28,7 @@ export {
   product4,
   product4Thumbnail,
   cartIcon,
+  cartIconWhite,
   closeIcon,
   deleteIcon,
   menuIcon,
