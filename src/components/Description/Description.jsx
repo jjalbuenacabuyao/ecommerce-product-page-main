@@ -1,19 +1,30 @@
-import React, { useState } from 'react'
-import styles from "./description.module.css"
-import { plusIcon, minusIcon, cartIconWhite } from '../../images'
+import React from "react";
+import styles from "./description.module.css";
+import { plusIcon, minusIcon, cartIconWhite } from "../../images";
 
-const Description = () => {
-  let [orderCount, setOrderCount] = useState(0);
+const Description = ({ orderCount, setOrderCount, setOrder }) => {
+  let noOrder = orderCount == 0;
+  const price = 125.00;
+  let product = {
+    name: "Fall Limited Edition Sneakers",
+    discountedPrice: price,
+    computedPrice: price * orderCount,
+    quantity: orderCount
+  }
 
   return (
     <div className={styles.description}>
       <p className={styles.company}>Sneaker Company</p>
-      <h1 className={styles.heading}>Fall Limited Edition Sneakers</h1>
-      <p className={styles.text__content}>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+      <h1 className={styles.heading}>{product.name}</h1>
+      <p className={styles.text__content}>
+        These low-profile sneakers are your perfect casual wear companion.
+        Featuring a durable rubber outer sole, they'll withstand everything the
+        weather can offer.
+      </p>
 
       <div className={styles.price}>
         <div>
-          <p className={styles.discounted__price}>$125.00</p>
+          <p className={styles.discounted__price}>{price}.00</p>
           <p className={styles.discount}>50%</p>
         </div>
         <p className={styles.original__price}>$250.00</p>
@@ -21,7 +32,10 @@ const Description = () => {
 
       <div className={styles.order}>
         <div className={styles.button__group}>
-          <button onClick={() => setOrderCount(orderCount == 0 ? 0 : --orderCount)}>
+          <button
+            onClick={() => setOrderCount(orderCount ? --orderCount : 0)}
+            disabled={noOrder ? true : false}
+          >
             <img src={minusIcon} alt="Minus icon" />
           </button>
 
@@ -32,13 +46,13 @@ const Description = () => {
           </button>
         </div>
 
-        <button className={styles.add__to__cart}>
+        <button className={styles.add__to__cart} onClick={() => setOrder({...product})}>
           <img src={cartIconWhite} alt="Cart Icon" />
           <span>Add to cart</span>
         </button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Description
+export default Description;
