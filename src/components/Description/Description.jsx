@@ -1,36 +1,39 @@
-import React from 'react'
-import { plusIcon, minusIcon, cartIcon } from '../../images'
+import React, { useState } from 'react'
+import styles from "./description.module.css"
+import { plusIcon, minusIcon, cartIconWhite } from '../../images'
 
 const Description = () => {
-  return (
-    <div>
-      <p>Sneaker Company</p>
-      <h1>Fall Limited Edition Sneakers</h1>
-      <p>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+  let [orderCount, setOrderCount] = useState(0);
 
-      <div>
+  return (
+    <div className={styles.description}>
+      <p className={styles.company}>Sneaker Company</p>
+      <h1 className={styles.heading}>Fall Limited Edition Sneakers</h1>
+      <p className={styles.text__content}>These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everything the weather can offer.</p>
+
+      <div className={styles.price}>
         <div>
-          <p>$125.00</p>
-          <p>50%</p>
+          <p className={styles.discounted__price}>$125.00</p>
+          <p className={styles.discount}>50%</p>
         </div>
-        <p>$250.00</p>
+        <p className={styles.original__price}>$250.00</p>
       </div>
 
-      <div>
-        <div>
+      <div className={styles.order}>
+        <div className={styles.button__group}>
           <button>
             <img src={minusIcon} alt="" />
           </button>
 
-          <p>0</p>
+          <p>{orderCount}</p>
 
           <button>
             <img src={plusIcon} alt="" />
           </button>
         </div>
 
-        <button>
-          <img src={cartIcon} alt="" />
+        <button className={styles.add__to__cart}>
+          <img src={cartIconWhite} alt="Cart Icon" />
           <span>Add to cart</span>
         </button>
       </div>
