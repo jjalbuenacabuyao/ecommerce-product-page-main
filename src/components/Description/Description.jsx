@@ -46,7 +46,7 @@ const Description = ({ orderCount, setOrderCount, setOrder }) => {
           </button>
         </div>
 
-        <button className={styles.add__to__cart} onClick={() => setOrder({...product})}>
+        <button className={styles.add__to__cart} onClick={() => setOrder({...product})} disabled={noOrder}>
           <img src={cartIconWhite} alt="Cart Icon" />
           <span>Add to cart</span>
         </button>
