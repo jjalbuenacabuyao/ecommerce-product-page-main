@@ -12,6 +12,10 @@
   color: var(--ver-dark-blue);
 }
 
+button:disabled {
+  opacity: 0.5;
+}
+
 .company {
   line-height: 1;
   text-transform: uppercase;
