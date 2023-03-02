@@ -1,11 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Showcase, Description } from '../../components'
 
 const MainContent = () => {
+  const [orderCount, setOrderCount] = useState(0);
+  const [order, setOrder] = useState({})
   return (
     <main>
       <Showcase />
-      <Description />
+      <Description orderCount={orderCount} setOrderCount={setOrderCount} setOrder={setOrder}/>
     </main>
   )
 }
