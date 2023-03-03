@@ -1,16 +1,9 @@
-import React from "react";
+import React, {useContext, useState} from "react";
 import styles from "./description.module.css";
 import { plusIcon, minusIcon, cartIconWhite } from "../../images";
 
-const Description = ({ orderCount, setOrderCount, setOrder }) => {
+const Description = ({orderCount, setOrderCount, setOrder, price, product }) => {
   let noOrder = orderCount == 0;
-  const price = 125.00;
-  let product = {
-    name: "Fall Limited Edition Sneakers",
-    discountedPrice: price,
-    computedPrice: price * orderCount,
-    quantity: orderCount
-  }
 
   return (
     <div className={styles.description}>
@@ -24,7 +17,7 @@ const Description = ({ orderCount, setOrderCount, setOrder }) => {
 
       <div className={styles.price}>
         <div>
-          <p className={styles.discounted__price}>{price}.00</p>
+          <p className={styles.discounted__price}>${price}.00</p>
           <p className={styles.discount}>50%</p>
         </div>
         <p className={styles.original__price}>$250.00</p>
@@ -46,7 +39,7 @@ const Description = ({ orderCount, setOrderCount, setOrder }) => {
           </button>
         </div>
 
-        <button className={styles.add__to__cart} onClick={() => setOrder({...product})} disabled={noOrder}>
+        <button className={styles.add__to__cart} onClick={() => setOrder(product)} disabled={noOrder}>
           <img src={cartIconWhite} alt="Cart Icon" />
           <span>Add to cart</span>
         </button>
