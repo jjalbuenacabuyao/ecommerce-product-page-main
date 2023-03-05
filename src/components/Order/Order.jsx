@@ -1,20 +1,21 @@
-import React, { useContext } from "react";
+import React from "react";
 import { product1, deleteIcon } from "../../images";
+import styles from "./order.module.css";
 
 const Order = ({order}) => {
   return (
     <>
-      <div>
-        <img src={product1} alt="" />
+      <div className={styles.order}>
+        <img src={product1} className={styles.order__img} alt="" />
 
         <div>
-          <p>{order.name}</p>
+          <p className={styles.order__name}>{order.name}</p>
           <p>
-            ${order.discountedPrice}.00 x {order.quantity} ${order.computedPrice}.00
+            ${order.discountedPrice}.00 x {order.quantity} <span className={styles.order__price}>${order.computedPrice}.00</span>
           </p>
         </div>
 
-        <button>
+        <button className={styles.checkout}>
           <img src={deleteIcon} alt="" />
         </button>
       </div>
