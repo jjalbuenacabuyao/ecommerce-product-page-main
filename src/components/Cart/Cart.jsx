@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import styles from "./cart.module.css";
 import {Order, EmptyOrder} from "../index"
+import styles from "./cart.module.css";
 
 const Cart = ({order}) => {
   const [open, setOpen] = useState(false);
