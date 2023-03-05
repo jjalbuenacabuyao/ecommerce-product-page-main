@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from "./emptyorder.module.css"
 
 const EmptyOrder = () => {
   return (
