@@ -1,0 +1,7 @@
+.cart {
+  z-index: 99;
+  position: absolute;
+  top: 4.75rem;
+  left: 0.5rem;
+  right: 0.5rem;
+}
