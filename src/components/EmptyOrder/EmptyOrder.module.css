@@ -1,0 +1,6 @@
+.empty {
+  padding-block: 5rem;
+  text-align: center;
+  color: hsl(219, 9%, 45%);
+  font-weight: bold;
+}
