@@ -3,7 +3,7 @@ import styles from "./emptyorder.module.css"
 
 const EmptyOrder = () => {
   return (
-    <p>Your cart is empty.</p>
+    <p className={styles.empty}>Your cart is empty.</p>
   )
 }
 
