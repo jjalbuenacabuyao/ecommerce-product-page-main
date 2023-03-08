@@ -4,4 +4,11 @@
   top: 4.75rem;
   left: 0.5rem;
   right: 0.5rem;
+  background-color: #FFF;
+  border-radius: 0.3rem;
+}
+
+.cart h2 {
+  padding: 1.75rem 1.5rem;
+  border-bottom: 1px solid hsl(219, 9%, 45%, 0.5);
 }
