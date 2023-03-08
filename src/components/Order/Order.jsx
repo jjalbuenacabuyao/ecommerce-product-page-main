@@ -15,12 +15,12 @@ const Order = ({order}) => {
           </p>
         </div>
 
-        <button className={styles.checkout}>
+        <button className={styles.delete}>
           <img src={deleteIcon} alt="" />
         </button>
       </div>
 
-      <button>Checkout</button>
+      <button className={styles.checkout}>Checkout</button>
     </>
   );
 };
