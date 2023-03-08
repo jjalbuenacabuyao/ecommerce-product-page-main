@@ -1,1 +1,45 @@
+.container {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
 
+.order {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.order__img {
+  width: 3.125rem;
+  aspect-ratio: 1/1;
+  border-radius: 0.3rem;
+}
+
+.order > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.order p {
+  color: hsl(220, 14%, 75%);
+}
+
+.order__price {
+  color: black;
+  font-weight: 700;
+}
+
+.checkout {
+  width: 100%;
+  padding-block: 1.25rem;
+
+  background-color: hsl(26, 100%, 55%);
+  border-radius: 0.5rem;
+
+  line-height: 1;
+  color: #FFF;
+  text-align: center;
+  font-weight: 700;
+}
