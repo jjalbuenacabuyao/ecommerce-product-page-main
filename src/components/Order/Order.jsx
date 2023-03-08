@@ -4,7 +4,7 @@ import styles from "./order.module.css";
 
 const Order = ({order}) => {
   return (
-    <>
+    <div className={styles.container}>
       <div className={styles.order}>
         <img src={product1} className={styles.order__img} alt="" />
 
@@ -21,7 +21,7 @@ const Order = ({order}) => {
       </div>
 
       <button className={styles.checkout}>Checkout</button>
-    </>
+    </div>
   );
 };
 
