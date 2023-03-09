@@ -3,7 +3,7 @@ import { Nav, Cart } from "../../components";
 import { logo, avatar } from "../../images";
 import styles from "./header.module.css";
 
-const Header = ({order}) => {
+const Header = ({order, setOrder}) => {
   return (
     <header className={styles.header}>
       <div className={styles.toggler__logo}>
@@ -17,7 +17,7 @@ const Header = ({order}) => {
       </div>
 
       <div className={styles.cart__user}>
-        <Cart order={order} />
+        <Cart order={order} setOrder={setOrder} />
         <img src={avatar} alt="User avatar" className={styles.avatar}/>
       </div>
     </header>
