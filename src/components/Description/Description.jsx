@@ -1,9 +1,30 @@
 import React from "react";
+import { ToastContainer, toast } from "react-toastify";
 import styles from "./description.module.css";
 import { plusIcon, minusIcon, cartIconWhite } from "../../images";
+import "react-toastify/dist/ReactToastify.css";
 
-const Description = ({orderCount, setOrderCount, setOrder, price, product }) => {
+const Description = ({
+  orderCount,
+  setOrderCount,
+  setOrder,
+  price,
+  product,
+}) => {
   let noOrder = orderCount == 0;
+  const notify = () => {
+    toast.success("Added to Cart!", {
+      position: "bottom-center",
+      autoClose: 3000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+    setOrder(product);
+  };
 
   return (
     <div className={styles.description}>
@@ -39,10 +60,26 @@ const Description = ({orderCount, setOrderCount, setOrder, price, product }) => 
           </button>
         </div>
 
-        <button className={styles.add__to__cart} onClick={() => setOrder(product)} disabled={noOrder}>
+        <button
+          className={styles.add__to__cart}
+          onClick={notify}
+          disabled={noOrder}
+        >
           <img src={cartIconWhite} alt="Cart Icon" />
           <span>Add to cart</span>
         </button>
+        <ToastContainer
+          position="bottom-center"
+          autoClose={3000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
       </div>
     </div>
   );
