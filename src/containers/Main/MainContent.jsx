@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 import { Showcase, Description } from "../../components";
-
 import Header from "../Header/Header";
 
 const MainContent = () => {
   const [orderCount, setOrderCount] = useState(0);
-  const [order, setOrder] = useState({})
-  const price = 125.00;
+  const [order, setOrder] = useState({});
+  const price = 125.0;
   let product = {
     name: "Fall Limited Edition Sneakers",
     discountedPrice: price,
@@ -19,7 +18,7 @@ const MainContent = () => {
       <Header order={order} setOrder={setOrder} />
       <main>
         <Showcase />
-        <Description 
+        <Description
           orderCount={orderCount}
           setOrderCount={setOrderCount}
           setOrder={setOrder}
