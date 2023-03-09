@@ -2,7 +2,7 @@ import React from "react";
 import { product1, deleteIcon } from "../../images";
 import styles from "./order.module.css";
 
-const Order = ({order}) => {
+const Order = ({ order, setOrder }) => {
   return (
     <div className={styles.container}>
       <div className={styles.order}>
@@ -15,7 +15,7 @@ const Order = ({order}) => {
           </p>
         </div>
 
-        <button className={styles.delete}>
+        <button className={styles.delete} onClick={() => setOrder({})}>
           <img src={deleteIcon} alt="" />
         </button>
       </div>
