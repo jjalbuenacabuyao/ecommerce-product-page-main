@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Order, EmptyOrder } from "../index";
 import styles from "./cart.module.css";
 
-const Cart = ({ order }) => {
+const Cart = ({ order, setOrder }) => {
   const [open, setOpen] = useState(false);
   return (
     <>
@@ -18,7 +18,7 @@ const Cart = ({ order }) => {
       <div hidden={!open} className={styles.cart}>
         <h2>Cart</h2>
         {JSON.stringify(order) !== "{}" ? (
-          <Order order={order} />
+          <Order order={order} setOrder={setOrder} />
         ) : (
           <EmptyOrder />
         )}
