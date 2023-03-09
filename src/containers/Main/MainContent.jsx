@@ -16,7 +16,7 @@ const MainContent = () => {
 
   return (
     <>
-      <Header order={order} />
+      <Header order={order} setOrder={setOrder} />
       <main>
         <Showcase />
         <Description 
