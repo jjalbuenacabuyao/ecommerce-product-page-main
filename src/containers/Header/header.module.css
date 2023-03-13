@@ -30,11 +30,16 @@
 }
 
 .nav__toggler {
+  z-index: 500;
   background-image: url(../../images/icon-menu.svg);
   background-repeat: no-repeat;
   background-position: center;
   width: 1rem;
   aspect-ratio: 1/1;
+}
+
+.nav__toggler[data-toggled="true"]{
+  background-image: url(../../images/icon-close.svg);
 }
 
 .avatar {
