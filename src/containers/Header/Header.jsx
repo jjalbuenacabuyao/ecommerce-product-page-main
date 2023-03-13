@@ -9,7 +9,7 @@ const Header = ({order, setOrder}) => {
   return (
     <header className={styles.header}>
       <div className={styles.toggler__logo}>
-        <button className={styles.nav__toggler} onClick={() => setNavOpen(!navOpen)}>
+        <button data-toggled={navOpen} className={styles.nav__toggler} onClick={() => setNavOpen(!navOpen)}>
           <span className="sr-only">Toggle navigation</span>
         </button>
         <a href="#">
