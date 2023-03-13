@@ -15,7 +15,7 @@ const Header = ({order, setOrder}) => {
         <a href="#">
           <img src={logo} alt="Sneakers logo" />
         </a>
-        <Nav />
+        <Nav navOpen={navOpen} />
       </div>
 
       <div className={styles.cart__user}>
