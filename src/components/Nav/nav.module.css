@@ -1,3 +1,27 @@
 .nav {
   display: none;
+  z-index: 99;
+  width: 66.66%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+}
+
+.nav[aria-expanded="true"]{
+  display: block;
+}
+
+.nav > ul {
+  padding-left: 1.5rem;
+  padding-top: 5.875rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.875rem;
+}
+
+.nav a {
+  font-weight: 700;
 }
