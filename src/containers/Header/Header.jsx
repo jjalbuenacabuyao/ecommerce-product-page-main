@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { Nav, Cart } from "../../components";
 import { logo, avatar } from "../../images";
 import styles from "./header.module.css";
 
 const Header = ({order, setOrder}) => {
+  const [navOpen, setNavOpen] = useState(false);
+
   return (
     <header className={styles.header}>
       <div className={styles.toggler__logo}>
-        <button className={styles.nav__toggler}>
+        <button className={styles.nav__toggler} onClick={() => setNavOpen(!navOpen)}>
           <span className="sr-only">Toggle navigation</span>
         </button>
         <a href="#">
